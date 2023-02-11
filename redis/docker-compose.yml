@@ -1,0 +1,9 @@
+version: '3.3'
+services:
+  dynamodb-local:
+    image: "redis:latest"
+    container_name: redis-local
+    ports:
+      - "6379:6379"
+    volumes:
+      - "./db-data:/data"
