@@ -1,0 +1,11 @@
+version: '3.3'
+services:
+  postgres-local:
+    image: "postgres"
+    container_name: postgres-local
+    environment:
+      - POSTGRES_HOST_AUTH_METHOD=trust
+    ports:
+      - "5432:5432"
+    volumes:
+      - "./db-data:/var/lib/postgresql/data"
